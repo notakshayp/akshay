@@ -12,12 +12,27 @@
 <body style="background-color : #fffff">
 	<br>
 	<center>
-		<img src="images/akshay.png" alt="NotAkshayP" class="responsive" >
+		<img src="images/akshay.png" alt="NotAkshayP" class="responsive" onload = "typeit()">
 	</center>
 		
 		<center>
-		<p style="font-size:3vw" >notakshayp@gmail.com</p></center>
+		<p style="font-size:3vw" id="email" ></p></center><br>
 	<center>
+	<!--onload type email fun-->
+	<script>
+		var i = 0;
+		var txt = 'notakshayp@gmail.com';
+		var speed = 90;
+
+
+		function typeit() {
+		if (i < txt.length) {
+			document.getElementById("email").innerHTML += txt.charAt(i);
+			i++;
+			setTimeout(typeit, speed);
+							}
+								}
+	</script>
 	<!--Socail Block-->
 	<div style="background-color:white;width:100%">
 
